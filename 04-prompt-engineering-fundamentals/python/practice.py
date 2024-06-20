@@ -112,9 +112,8 @@ def practice_4():
 response = client.chat.completions.create(
     model=model,
     messages=[
-        {"role": "system", "content": "You are a serious assistant."},
-        {"role": "user", "content": "Dünyadaki en iyi 5 chip tasarım ve üretim firmasını sıralar mısın?"},
-        {"role": "user", "content": "Sence bunlardan hangisi yapay zeka konusunda en iyisi hangisi peki?"},
+        {"role": "system", "content": "You will be provided with a text, and your task is to extract the airport codes from it."},
+        {"role": "user", "content": "Turkish: SAbiha GökŞEN to Kahramanmaraş'a"},        
         
     ]
 )
