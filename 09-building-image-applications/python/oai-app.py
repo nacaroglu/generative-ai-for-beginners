@@ -15,7 +15,7 @@ try:
     # Create an image by using the image generation API
     generation_response = client.images.generate(
         model="dall-e-3",
-        prompt='Bunny on horse, holding a lollipop, on a foggy meadow where it grows daffodils',    # Enter your prompt text here
+        prompt='2050 Turkiye siyasi haritasi, yazilar turkce ve sinirlar belirgin olsun',    # Enter your prompt text here
         size='1024x1024',
         n=1
     )
