@@ -9,7 +9,14 @@ import pandas as pd  # for DataFrames to store article sections and embeddings
 import re  # for cutting <ref> links out of Wikipedia articles
 import tiktoken  # for counting tokens
 
-client = openai.OpenAI(api_key=os.environ.get("OPENAI_API_KEY", "sk-my-service-account-w4NBYU7piOp8QcJoLLgQT3BlbkFJRwh7oOYX3yTT4cQA9MHF"))
+from dotenv import load_dotenv
+
+load_dotenv()
+
+API_KEY = os.getenv("OPENAI_API_KEY","")
+assert API_KEY, "ERROR: OpenAI Key is missing"
+
+client = openai.OpenAI(api_key=API_KEY)
 
 CATEGORY_TITLE = "Kategori:Osmanlı_padişahları"
 WIKI_SITE = "tr.wikipedia.org"
